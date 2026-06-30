@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // -------------------------------------------------------------
-    // 1. Interactive Canvas Background (2D Motion Graphics Physics)
+    // 1. Interactive Canvas Background (Soft Ambient Light Motion)
     // -------------------------------------------------------------
     const canvas = document.getElementById('canvas-bg');
     const ctx = canvas.getContext('2d');
@@ -14,22 +14,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const particles = [];
-    const particleCount = Math.min(40, Math.floor(width / 30));
+    const particleCount = Math.min(25, Math.floor(width / 50));
     const colors = [
-        'rgba(0, 240, 255, 0.25)', // Neon Cyan
-        'rgba(37, 99, 235, 0.15)',  // Electric Blue
-        'rgba(255, 41, 133, 0.12)'  // Accent Pink (sparingly)
+        'rgba(155, 48, 86, 0.05)',   // Deep Berry Pink Tint
+        'rgba(253, 242, 248, 0.6)',  // Soft Rose wash
+        'rgba(241, 245, 249, 0.7)'   // Gentle Slate wash
     ];
 
     class Particle {
         constructor() {
             this.x = Math.random() * width;
             this.y = Math.random() * height;
-            this.radius = Math.random() * 80 + 20; // larger soft ambient blobs
+            this.radius = Math.random() * 120 + 40; // larger soft ambient blobs
             this.color = colors[Math.floor(Math.random() * colors.length)];
-            this.vx = (Math.random() - 0.5) * 0.5;
-            this.vy = (Math.random() - 0.5) * 0.5;
-            this.pulseSpeed = Math.random() * 0.005 + 0.002;
+            this.vx = (Math.random() - 0.5) * 0.3;
+            this.vy = (Math.random() - 0.5) * 0.3;
+            this.pulseSpeed = Math.random() * 0.003 + 0.001;
             this.pulsePhase = Math.random() * Math.PI;
             this.originalRadius = this.radius;
         }
@@ -39,21 +39,21 @@ document.addEventListener('DOMContentLoaded', () => {
             this.y += this.vy;
 
             // Soft boundaries check
-            if (this.x < -100) this.x = width + 100;
-            if (this.x > width + 100) this.x = -100;
-            if (this.y < -100) this.y = height + 100;
-            if (this.y > height + 100) this.y = -100;
+            if (this.x < -150) this.x = width + 150;
+            if (this.x > width + 150) this.x = -150;
+            if (this.y < -150) this.y = height + 150;
+            if (this.y > height + 150) this.y = -150;
 
             // Pulsating size animation (liquid motion look)
             this.pulsePhase += this.pulseSpeed;
-            this.radius = this.originalRadius + Math.sin(this.pulsePhase) * 15;
+            this.radius = this.originalRadius + Math.sin(this.pulsePhase) * 20;
         }
 
         draw() {
             ctx.beginPath();
             const grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
             grad.addColorStop(0, this.color);
-            grad.addColorStop(1, 'rgba(5, 7, 15, 0)');
+            grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
             ctx.fillStyle = grad;
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
             ctx.fill();
@@ -75,23 +75,28 @@ document.addEventListener('DOMContentLoaded', () => {
     function drawInteractiveLines() {
         if (mouse.x === null) return;
         ctx.beginPath();
-        const grad = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 180);
-        grad.addColorStop(0, 'rgba(0, 240, 255, 0.08)');
-        grad.addColorStop(0.5, 'rgba(255, 41, 133, 0.03)');
-        grad.addColorStop(1, 'rgba(5, 7, 15, 0)');
+        const grad = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 200);
+        grad.addColorStop(0, 'rgba(155, 48, 86, 0.04)');
+        grad.addColorStop(0.5, 'rgba(253, 242, 248, 0.02)');
+        grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
         ctx.fillStyle = grad;
-        ctx.arc(mouse.x, mouse.y, 180, 0, Math.PI * 2);
+        ctx.arc(mouse.x, mouse.y, 200, 0, Math.PI * 2);
         ctx.fill();
     }
 
     function animate() {
-        ctx.fillStyle = '#05070f';
+        ctx.fillStyle = '#ffffff';
         ctx.fillRect(0, 0, width, height);
 
         // Smooth mouse coords
         if (mouse.targetX !== null) {
-            mouse.x += (mouse.targetX - mouse.x) * 0.08;
-            mouse.y += (mouse.targetY - mouse.y) * 0.08;
+            if (mouse.x === null) {
+                mouse.x = mouse.targetX;
+                mouse.y = mouse.targetY;
+            } else {
+                mouse.x += (mouse.targetX - mouse.x) * 0.08;
+                mouse.y += (mouse.targetY - mouse.y) * 0.08;
+            }
         }
 
         drawInteractiveLines();
@@ -154,32 +159,32 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => revealObserver.observe(el));
 
     // -------------------------------------------------------------
-    // 4. Portfolio Showcase Modals
+    // 4. Modal Activation & Project Details
     // -------------------------------------------------------------
     const projectData = {
         '1': {
-            title: 'Fluid Dynamics',
-            tag: 'Liquid Motion',
-            desc: 'This project showcases complex custom vector liquid simulation frame-by-frame. Combining organic shapes, morphing elements, and rhythmic physics, this style is ideal for fresh brand statements, loading animations, and dynamic transition elements in promotional videos.',
-            img: 'assets/project1.png',
-            client: 'Creative Labs Inc.',
-            software: 'Adobe After Effects, Illustrator'
+            title: '5 Loaves and 2 Fishes',
+            tag: 'Illustrations • Editing • Book Layout Design',
+            desc: 'A wellness-focused devotional project. Designed with illustrations acting as a tool for art therapy, providing readers with a gentle, calming environment for mental rest and emotional recovery. The design aligns visual imagery directly with devotional content for holistic engagement.',
+            img: 'assets/five_loaves_two_fishes.jpg',
+            client: 'Devotional Series Author',
+            impact: 'Devotional Wellness & Graphic Therapy'
         },
         '2': {
-            title: 'Rhythm & Type',
-            tag: 'Kinetic Typography',
-            desc: 'Kinetic typography design exploring letters as physical 3D and 2D components. Characters morph, scale, and bend in lockstep with a custom musical score, illustrating how written text can evoke human emotion and pacing on screen.',
-            img: 'assets/project2.png',
-            client: 'Vocal Poets Society',
-            software: 'After Effects, Premiere Pro, Figma'
+            title: 'Becoming a Love Letter',
+            tag: 'Book Design • Illustrations • Editing • Self Publishing',
+            desc: 'A complete custom self-publishing venture bridging vector illustrations, layouts, page pagination, and poetry. Built to express a cohesive flow where words and custom margins enhance the emotional rhythm of the story.',
+            img: 'assets/becoming_love_letter_cover.jpg',
+            client: 'Joy Oghenemarie Publications',
+            impact: 'Integrated Poetry & Visual Design'
         },
         '3': {
-            title: 'Stellar Wanderer',
-            tag: 'Character Design & Narrative',
-            desc: 'A story-driven animated short detailing a traveler exploring neon space ruins. This piece demonstrates character asset rigging, atmospheric vector coloring, parallax backgrounds, and subtle lighting physics to deliver a sci-fi emotional narrative.',
-            img: 'assets/project3.png',
-            client: 'Cosmic Indie Film Fest',
-            software: 'Toon Boom Harmony, After Effects, Photoshop'
+            title: 'Eninla',
+            tag: 'Book Consultation • Book Cover Design • Editing • Layout Design',
+            desc: 'An inspiring title translating a dramatic narrative path from darkness to light. Focuses on premium cover styling, layout margins, typography, and editing to maximize audience conversion. (Scheduled for publication soon.)',
+            img: 'assets/eninla_cover.jpg',
+            client: 'Mary Light Victor',
+            impact: 'Premium Literary Art Direction'
         }
     };
 
@@ -190,10 +195,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalTitle = document.getElementById('modal-title');
     const modalDesc = document.getElementById('modal-desc');
 
-    document.querySelectorAll('.portfolio-item').forEach(item => {
+    // Click trigger on Book cards
+    document.querySelectorAll('.book-card').forEach(item => {
         item.addEventListener('click', () => {
-            const projId = item.getAttribute('data-project');
-            const data = projectData[projId];
+            const bookId = item.getAttribute('data-book');
+            const data = projectData[bookId];
             if (data) {
                 modalImg.src = data.img;
                 modalTag.textContent = data.tag;
@@ -201,8 +207,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalDesc.textContent = data.desc;
                 
                 modal.classList.add('active');
-                document.body.style.overflow = 'hidden'; // prevent page scroll
+                document.body.style.overflow = 'hidden';
             }
+        });
+    });
+
+    // Click trigger on Gallery items
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const imgUrl = item.getAttribute('data-img-src');
+            const title = item.getAttribute('data-title');
+            const subtitle = item.getAttribute('data-sub');
+            
+            modalImg.src = imgUrl;
+            modalTag.textContent = 'Gallery Item';
+            modalTitle.textContent = title;
+            modalDesc.textContent = subtitle;
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
         });
     });
 
@@ -218,7 +241,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Close modal on Escape key
     window.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
             closeModalFunc();
@@ -229,26 +251,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Design Inspiration Widget Interactive Behavior
     // -------------------------------------------------------------
     const inspoData = {
-        'liquid': {
-            title: 'Liquid Energy',
-            tag: 'Liquid Motion Styles',
-            desc: 'Perfect for dynamic, energetic branding. Employs fluid simulations, elastic organic transitions, and high-contrast hues to feel alive and fresh.',
-            img: 'assets/inspo.png',
-            colors: ['#0b0d19', '#00f0ff', '#3b82f6', '#ff2a85']
+        'berry': {
+            title: 'Berry Pink Comfort',
+            tag: 'Becoming a Love Letter Style',
+            desc: 'Uses soft pink flowers, cute hearts, and clean serif text. Prompts readers to enter a warm, calming space.',
+            img: 'assets/becoming_love_letter_cover.jpg',
+            colors: ['#ffffff', '#9B3056', '#fdf2f8', '#f87171']
         },
-        'geometric': {
-            title: 'Geometric Grid',
-            tag: 'Kinetic Typography & Geometry',
-            desc: 'Clean, structured, and mathematical. Uses exact alignment, sharp vector loops, rotating coordinates, and grid layouts for tech and corporate presentations.',
-            img: 'assets/project2.png',
-            colors: ['#05070f', '#00e5ff', '#1d243d', '#ff2985']
+        'gold': {
+            title: 'Earthy Devotional',
+            tag: '5 Loaves & 2 Fishes Style',
+            desc: 'Warm cream, organic beige, and illustrative pen textures. Highlights wellness, healing, and structured mindfulness layouts.',
+            img: 'assets/five_loaves_two_fishes.jpg',
+            colors: ['#fefcbf', '#d97706', '#fcf8f2', '#78350f']
         },
-        'cosmic': {
-            title: 'Cosmic Narrative',
-            tag: 'Character & Moodboards',
-            desc: 'Dreamy visual storytelling styling. Features stylized characters, galactic glowing spheres, deep rich space backdrops, and low-contrast details.',
-            img: 'assets/project3.png',
-            colors: ['#090a14', '#0099ff', '#1a337a', '#ff4d94']
+        'black': {
+            title: 'Bold Contrast',
+            tag: 'Eninla Styling',
+            desc: 'Dramatic solid blacks, glowing whites, and striking focus points. Represents transformation, courage, and cinematic narrative strength.',
+            img: 'assets/eninla_cover.jpg',
+            colors: ['#000000', '#ffffff', '#e2e8f0', '#9B3056']
         }
     };
 
@@ -261,7 +283,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     inspoButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Update active state
             inspoButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
@@ -269,7 +290,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = inspoData[styleType];
 
             if (data) {
-                // Fade out image, swap source, fade back in
                 inspoImg.style.opacity = '0.3';
                 setTimeout(() => {
                     inspoImg.src = data.img;
@@ -277,7 +297,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     inspoTitle.textContent = data.title;
                     inspoDesc.textContent = data.desc;
                     
-                    // Render color palette swatches
                     paletteDisplay.innerHTML = '';
                     data.colors.forEach(col => {
                         const swatch = document.createElement('span');
@@ -302,7 +321,6 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // Simple micro-animation transition
         form.style.opacity = '0';
         setTimeout(() => {
             form.style.display = 'none';

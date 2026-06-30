@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Joy Oghenemarie - Creative 2D motion graphic storyteller. Crafting stunning character animations, liquid motion, and kinetic typography.">
-    <title>joy oghenemarie | 2D Motion Graphic Storyteller</title>
+    <meta name="description" content="Portfolio of Joy Oghenemarie - Illustrator, Book Designer, Editor and Publishing Consultant. Crafting books and illustrations that leave a mark on the sands of time.">
+    <title>joy oghenemarie | Book Designer & Illustrator</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Background Canvas for interactive motion particles -->
+    <!-- Background Canvas for interactive soft ambient motion -->
     <canvas id="canvas-bg"></canvas>
 
     <!-- Header / Navigation -->
@@ -24,9 +24,9 @@
                 <span class="bar"></span>
             </button>
             <nav class="nav-links">
-                <a href="#about" class="nav-item">About Me</a>
-                <a href="#why-me" class="nav-item">Why Work With Me</a>
-                <a href="#work" class="nav-item">My Work</a>
+                <a href="#about" class="nav-item">Philosophy</a>
+                <a href="#books" class="nav-item">Book Projects</a>
+                <a href="#gallery" class="nav-item">Gallery</a>
                 <a href="#inspo" class="nav-item">Design Inspo</a>
                 <a href="#contact" class="btn btn-primary btn-sm">Let's Collaborate</a>
             </nav>
@@ -36,27 +36,31 @@
     <main>
         <!-- Hero Section -->
         <section class="hero-section" id="hero">
-            <div class="hero-content container">
-                <div class="badge-container">
-                    <span class="badge">2D Motion Graphic Storyteller</span>
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="badge-container">
+                            <span class="badge">Illustrator & Book Designer</span>
+                        </div>
+                        <h1 class="hero-title animate-text">
+                            Portals to <br>
+                            <span class="text-gradient">Enlightenment</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            I help authors craft authentic, lasting impressions, turning book dreams into reality through custom book cover design, editing, and layout consulting.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#books" class="btn btn-primary">Book Projects</a>
+                            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div class="hero-portrait-container">
+                        <div class="hero-portrait-wrapper">
+                            <img src="assets/portrait.jpg" alt="Joy Oghenemarie Portrait" class="hero-portrait-img">
+                            <div class="portrait-glow"></div>
+                        </div>
+                    </div>
                 </div>
-                <h1 class="hero-title animate-text">
-                    Breathing Life <br>
-                    Into <span class="text-gradient">Static Frames</span>
-                </h1>
-                <p class="hero-subtitle">
-                    I tell compelling visual stories using rhythm, physics, and emotion. Crafting premium 2D animations that capture attention and never let go.
-                </p>
-                <div class="hero-actions">
-                    <a href="#work" class="btn btn-primary">Explore My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <span class="mouse-icon">
-                    <span class="wheel"></span>
-                </span>
-                <span class="scroll-text">Scroll to explore</span>
             </div>
         </section>
 
@@ -65,131 +69,189 @@
             <div class="section-grid">
                 <div class="about-visual reveal-left">
                     <div class="image-wrapper glass-card">
-                        <img src="assets/project3.png" alt="Creative Illustration of Joy's Universe" class="about-img">
-                        <div class="glow-bg"></div>
+                        <img src="assets/becoming_love_letter_cover.jpg" alt="Becoming a Love Letter Cover Design" class="about-img">
                     </div>
                 </div>
                 <div class="about-text reveal-right">
-                    <h2 class="section-title">About Me</h2>
+                    <h2 class="section-title">My Philosophy</h2>
                     <p class="lead-text">
-                        Hi, I'm Joy Oghenemarie. I translate complex ideas, emotions, and narratives into fluid, stylized 2D motion graphics.
+                        Every piece of art carries more than a story.
                     </p>
-                    <p>
-                        With years of experience blending timing, visual poetry, and sound, I specialize in character-driven storytelling and abstract vector animations. I believe every motion frame should serve the story, creating a rhythmic dialogue between the characters on screen and the audience.
+                    <div class="philosophy-quote">
+                        "My goal when I draw is to create art that makes a mark on the sands of time, and adds dimensions to an unfolding story. Whether they find their home on a book cover, within the pages of a book, on a webpage, or a greeting card, my focus remains the same: to create a portal through which people enter an experience of enlightenment and transformation."
+                    </div>
+                    <p style="font-weight: 600; font-size: 1.15rem; color: var(--berry-pink); margin-top: 20px;">
+                        What story are you telling? Let's work together to amplify your voice.
                     </p>
                     <div class="skills-grid">
-                        <div class="skill-tag">Character Animation</div>
-                        <div class="skill-tag">Liquid Motion</div>
-                        <div class="skill-tag">Kinetic Typography</div>
-                        <div class="skill-tag">Storyboarding</div>
-                        <div class="skill-tag">Vector Illustration</div>
-                        <div class="skill-tag">Art Direction</div>
+                        <div class="skill-tag">Book Design</div>
+                        <div class="skill-tag">Illustrations</div>
+                        <div class="skill-tag">Editing</div>
+                        <div class="skill-tag">Self Publishing</div>
+                        <div class="skill-tag">Book Consultation</div>
+                        <div class="skill-tag">Book Layout Design</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Why work with me Section -->
-        <section class="why-me-section container" id="why-me">
-            <h2 class="section-title text-center">Why You Should Work With Me</h2>
-            <p class="section-subtitle text-center">Bringing a blend of creative direction, technical speed, and story-first methodology to every frame.</p>
-            
-            <div class="cards-grid">
-                <!-- Card 1 -->
-                <div class="feature-card glass-card reveal-up">
-                    <div class="card-icon blue-glow">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
+        <section class="why-me-section" id="why-me">
+            <div class="container">
+                <h2 class="section-title text-center">Why Work With Me</h2>
+                <p class="section-subtitle text-center">Translating your thoughts and values into a tangible literary experience.</p>
+                
+                <div class="cards-grid">
+                    <!-- Card 1 -->
+                    <div class="feature-card glass-card reveal-up">
+                        <div class="card-icon berry-glow">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <h3>Cohesive Narrative</h3>
+                        <p>I view books as a wholesome, organic product. I align cover art, typesetting rhythm, margins, and interior graphics with the writer's authentic voice.</p>
                     </div>
-                    <h3>Narrative-First Approach</h3>
-                    <p>I don't just move objects across a screen. Every splash of liquid motion and character gesture is intentionally choreographed to serve your narrative and connect emotionally.</p>
-                </div>
 
-                <!-- Card 2 -->
-                <div class="feature-card glass-card reveal-up" style="animation-delay: 0.1s;">
-                    <div class="card-icon pink-glow">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
+                    <!-- Card 2 -->
+                    <div class="feature-card glass-card reveal-up" style="animation-delay: 0.1s;">
+                        <div class="card-icon berry-glow">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3>Therapeutic & Wellness Focus</h3>
+                        <p>Art holds healing properties. My design choices and sketches act as visual safe spaces, supporting cognitive rest and reader connection.</p>
                     </div>
-                    <h3>Precision & Rhythm</h3>
-                    <p>Great animation is about timing. I fine-tune easing curves and synchronise transitions to sound designs, creating a satisfying, polished rhythm that makes viewers watch on loop.</p>
-                </div>
 
-                <!-- Card 3 -->
-                <div class="feature-card glass-card reveal-up" style="animation-delay: 0.2s;">
-                    <div class="card-icon blue-glow">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
+                    <!-- Card 3 -->
+                    <div class="feature-card glass-card reveal-up" style="animation-delay: 0.2s;">
+                        <div class="card-icon berry-glow">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                        </div>
+                        <h3>Self-Publishing Expertise</h3>
+                        <p>From final files preparation for KDP/IngramSpark to metadata and paper stocks selection, I guide you step-by-step to realize your publication goals.</p>
                     </div>
-                    <h3>Seamless Collaboration</h3>
-                    <p>From storyboards and moodboards to styleframes and final renders, I maintain clear, visual communication loops so you are always aligned with the creative vision.</p>
                 </div>
             </div>
         </section>
 
-        <!-- My Work Section -->
-        <section class="work-section container" id="work">
-            <h2 class="section-title text-center">My Selected Work</h2>
-            <p class="section-subtitle text-center">A curation of projects showcasing storytelling, kinetic physics, and custom visual design.</p>
+        <!-- Book Projects Section -->
+        <section class="books-section container" id="books">
+            <h2 class="section-title text-center">Featured Book Projects</h2>
+            <p class="section-subtitle text-center">Art direction, consulting, and publishing services delivered to bring literary dreams to reality.</p>
             
-            <div class="portfolio-grid">
-                <!-- Project 1 -->
-                <div class="portfolio-item glass-card reveal-up" data-project="1">
-                    <div class="portfolio-img-container">
-                        <img src="assets/project1.png" alt="Fluid Dynamics - 2D Liquid Animation">
-                        <div class="portfolio-overlay">
-                            <span class="play-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                            </span>
+            <!-- Preface Card -->
+            <div class="preface-card glass-card reveal-up">
+                <div class="preface-grid">
+                    <div class="preface-text">
+                        <p><strong>A book cover is more than an introduction; it is the first "hello" from an author to their reader.</strong> Through book consultation, editing, and cover design, I help authors craft authentic, lasting impressions that invite casual browsers to become readers. It is always a pleasure to see the reaction of a client who is pleased to see their book dream become reality.</p>
+                        <p><strong>For Book Publishing:</strong> As a child, I enjoyed writing stories, drawing pictures of the same theme, and piecing the papers together to make story books. This childhood hobby, and my belief that every life-transforming thought should be turned into a book to help not just the current, but future generations, fuels my passion for helping people bring their book dreams to reality.</p>
+                    </div>
+                    <div class="preface-quote">
+                        <h4>Have a manuscript waiting?</h4>
+                        <p>"If you have a book in you, write. We will help you bring your book to life."</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book Cards Grid -->
+            <div class="books-grid">
+                <!-- Book 1 -->
+                <div class="book-card glass-card reveal-up" data-book="1">
+                    <div class="book-img-container">
+                        <img src="assets/five_loaves_two_fishes.jpg" alt="5 Loaves and 2 Fishes inside spread">
+                        <div class="book-overlay">
+                            <span class="view-details-btn">View Case Study</span>
                         </div>
                     </div>
-                    <div class="portfolio-info">
-                        <span class="project-tag">Liquid Motion</span>
-                        <h3>Fluid Dynamics</h3>
-                        <p class="project-desc-short">An exploration of fluid simulation in 2D space, demonstrating splash mechanics and smooth morphing transitions.</p>
+                    <div class="book-info">
+                        <span class="book-role">Illustrations • Editing • Book Layout Design</span>
+                        <h3>5 Loaves and 2 Fishes</h3>
+                        <p>The reviews are pouring in. In different words, a number of readers agree that the illustrations ushered them into a safe space to experience the benefits of art therapy. This is what I set out to achieve when I began to add pictures to the devotional. I wanted readers to see a tool for wellness, not just another picture book. The feedback from multiple readers proves that the mission was accomplished.</p>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="portfolio-item glass-card reveal-up" data-project="2" style="animation-delay: 0.1s;">
-                    <div class="portfolio-img-container">
-                        <img src="assets/project2.png" alt="Kinetic Typography & Geometry">
-                        <div class="portfolio-overlay">
-                            <span class="play-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                            </span>
+                <!-- Book 2 -->
+                <div class="book-card glass-card reveal-up" data-book="2" style="animation-delay: 0.1s;">
+                    <div class="book-img-container">
+                        <img src="assets/becoming_love_letter_cover.jpg" alt="Becoming a Love Letter Cover">
+                        <div class="book-overlay">
+                            <span class="view-details-btn">View Case Study</span>
                         </div>
                     </div>
-                    <div class="portfolio-info">
-                        <span class="project-tag">Typography</span>
-                        <h3>Rhythm & Type</h3>
-                        <p class="project-desc-short">A fast-paced kinetic typography piece set to spoken word poetry, blending bold fonts with elastic vector animations.</p>
+                    <div class="book-info">
+                        <span class="book-role">Book Design • Illustrations • Editing • Self Publishing</span>
+                        <h3>Becoming a Love Letter</h3>
+                        <p>This project represents the intersection of my work as an illustrator, book designer, and poet. It is a testament to my belief that every detail of a book—from the cover art and the illustrations within to the cadence of the words—should contribute to a wholesome, transformative story.</p>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="portfolio-item glass-card reveal-up" data-project="3" style="animation-delay: 0.2s;">
-                    <div class="portfolio-img-container">
-                        <img src="assets/project3.png" alt="Stellar Wanderer - Character Animation">
-                        <div class="portfolio-overlay">
-                            <span class="play-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                            </span>
+                <!-- Book 3 -->
+                <div class="book-card glass-card reveal-up" data-book="3" style="animation-delay: 0.2s;">
+                    <div class="book-img-container">
+                        <img src="assets/eninla_cover.jpg" alt="Eninla Book Cover Design Mockup">
+                        <div class="book-overlay">
+                            <span class="view-details-btn">View Case Study</span>
                         </div>
                     </div>
-                    <div class="portfolio-info">
-                        <span class="project-tag">Character Design & Narrative</span>
-                        <h3>Stellar Wanderer</h3>
-                        <p class="project-desc-short">An emotional, character-driven storytelling short film depicting a wanderer discovering an ancient cosmic artifact.</p>
+                    <div class="book-info">
+                        <span class="book-role">Book Consultation • Book Cover Design • Editing • Book Layout Design</span>
+                        <h3>Eninla</h3>
+                        <p>A deep and moving volume of hope. The layout and cover graphics capture the journey from shadows towards the bright, defining light. (To be released soon.)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <h2 class="section-title text-center">Illustration & Book Spread Gallery</h2>
+                <p class="section-subtitle text-center">A close look at custom illustrations, typography spreads, and final printed book results.</p>
+                
+                <div class="gallery-grid">
+                    <!-- Item 1 -->
+                    <div class="gallery-item reveal-up" data-img-src="assets/becoming_love_letter_cover.jpg" data-title="Becoming a Love Letter Front Cover" data-sub="Original illustration and layout design.">
+                        <img src="assets/becoming_love_letter_cover.jpg" alt="Becoming a Love Letter Cover Illustration">
+                        <div class="gallery-overlay">
+                            <h4>Becoming a Love Letter</h4>
+                            <p>Front Cover Design</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="gallery-item reveal-up" style="animation-delay: 0.05s;" data-img-src="assets/becoming_love_letter_spread.png" data-title="Becoming a Love Letter Inside Spread" data-sub="Inside poetry formatting showing 'Trophy' and 'Love Story'.">
+                        <img src="assets/becoming_love_letter_spread.png" alt="Becoming a Love Letter Spread">
+                        <div class="gallery-overlay">
+                            <h4>Interior Spreads</h4>
+                            <p>Poetry & Graphic Layout</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="gallery-item reveal-up" style="animation-delay: 0.1s;" data-img-src="assets/five_loaves_two_fishes.jpg" data-title="5 Loaves & 2 Fishes Devotional" data-sub="Inside illustration serving as a safe space for art therapy.">
+                        <img src="assets/five_loaves_two_fishes.jpg" alt="5 Loaves and 2 Fishes page">
+                        <div class="gallery-overlay">
+                            <h4>Devotional Layout</h4>
+                            <p>Wellness Art Therapy Page</p>
+                        </div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="gallery-item reveal-up" style="animation-delay: 0.15s;" data-img-src="assets/eninla_cover.jpg" data-title="Eninla Book Presentation" data-sub="Front and back cover representation of 'Eninla'.">
+                        <img src="assets/eninla_cover.jpg" alt="Eninla Covers">
+                        <div class="gallery-overlay">
+                            <h4>Eninla Book Covers</h4>
+                            <p>Front & Back Panel Art Direction</p>
+                        </div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="gallery-item reveal-up" style="animation-delay: 0.2s;" data-img-src="assets/eninla_mockup.jpg" data-title="Eninla Limited Edition Mockup" data-sub="Box set presentation illustrating premium box design.">
+                        <img src="assets/eninla_mockup.jpg" alt="Eninla Box Mockup">
+                        <div class="gallery-overlay">
+                            <h4>Eninla Box Mockup</h4>
+                            <p>Product Design & Presentation</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -198,37 +260,37 @@
         <!-- Design Inspo for Clients Section -->
         <section class="inspo-section container" id="inspo">
             <h2 class="section-title text-center">Design Inspo for Clients</h2>
-            <p class="section-subtitle text-center">Explore different motion graphics directions and color aesthetics to inspire your next project.</p>
+            <p class="section-subtitle text-center">Explore different illustration moods and layout styles to inspire your next book project.</p>
             
             <div class="inspo-container glass-card">
                 <div class="inspo-sidebar">
                     <h3>Select a Style Mood</h3>
                     <div class="inspo-buttons">
-                        <button class="inspo-btn active" data-style="liquid">
-                            <span class="dot blue"></span> Liquid Energy
+                        <button class="inspo-btn active" data-style="berry">
+                            <span class="dot berry"></span> Berry Pink Comfort
                         </button>
-                        <button class="inspo-btn" data-style="geometric">
-                            <span class="dot pink"></span> Geometric Grid
+                        <button class="inspo-btn" data-style="gold">
+                            <span class="dot gold"></span> Earthy Devotional
                         </button>
-                        <button class="inspo-btn" data-style="cosmic">
-                            <span class="dot cyan"></span> Cosmic Narrative
+                        <button class="inspo-btn" data-style="black">
+                            <span class="dot black"></span> Bold Contrast
                         </button>
                     </div>
                     <div class="inspo-details">
-                        <h4 id="inspo-title">Liquid Energy</h4>
-                        <p id="inspo-desc">Perfect for dynamic, energetic branding. Employs fluid simulations, elastic organic transitions, and high-contrast hues to feel alive and fresh.</p>
+                        <h4 id="inspo-title">Berry Pink Comfort</h4>
+                        <p id="inspo-desc">Uses soft pink flowers, cute hearts, and clean serif text. Prompts readers to enter a warm, calming space.</p>
                         <div class="palette-display">
-                            <span class="color-swatch" style="background-color: #0b0d19;" title="Space Black"></span>
-                            <span class="color-swatch" style="background-color: #00f0ff;" title="Neon Cyan"></span>
-                            <span class="color-swatch" style="background-color: #3b82f6;" title="Electric Blue"></span>
-                            <span class="color-swatch" style="background-color: #ff2a85;" title="Accent Pink"></span>
+                            <span class="color-swatch" style="background-color: #ffffff;" title="White"></span>
+                            <span class="color-swatch" style="background-color: #9B3056;" title="Deep Berry Pink"></span>
+                            <span class="color-swatch" style="background-color: #fdf2f8;" title="Light Accent Pink"></span>
+                            <span class="color-swatch" style="background-color: #f87171;" title="Soft Rose"></span>
                         </div>
                     </div>
                 </div>
                 <div class="inspo-preview">
-                    <img id="inspo-img" src="assets/inspo.png" alt="Design Inspiration Moodboard">
+                    <img id="inspo-img" src="assets/becoming_love_letter_cover.jpg" alt="Design Inspiration Moodboard">
                     <div class="preview-overlay">
-                        <span class="tag" id="inspo-tag">Liquid Motion Styles</span>
+                        <span class="tag" id="inspo-tag">Becoming a Love Letter Style</span>
                     </div>
                 </div>
             </div>
@@ -238,7 +300,7 @@
         <section class="contact-section container" id="contact">
             <div class="contact-card glass-card">
                 <h2 class="section-title text-center">Start a Story With Me</h2>
-                <p class="section-subtitle text-center">Ready to elevate your project with high-end 2D motion graphics? Fill out the brief below and let's bring it to life.</p>
+                <p class="section-subtitle text-center">Ready to elevate your book or illustration project? Tell me about your dream and let's bring it to life.</p>
                 
                 <form class="contact-form" id="collaborate-form">
                     <div class="form-row">
@@ -252,24 +314,24 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="project-type">Motion Style Interest</label>
+                        <label for="project-type">Project Requirement</label>
                         <select id="project-type">
-                            <option value="liquid">Liquid Motion & Transitions</option>
-                            <option value="typography">Kinetic Typography</option>
-                            <option value="character">Character Storytelling</option>
-                            <option value="custom">Something custom & experimental</option>
+                            <option value="illustrations">Illustrations & Inside Art</option>
+                            <option value="cover-design">Book Cover Design</option>
+                            <option value="layout-design">Book Layout & Formatting</option>
+                            <option value="consultation">Full Book Consultation & Editing</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="message">Your Project Details</label>
-                        <textarea id="message" rows="5" required placeholder="Tell me a bit about your brand, story timeline, and goals..."></textarea>
+                        <label for="message">Tell me about your book</label>
+                        <textarea id="message" rows="5" required placeholder="Tell me a bit about your book concept, formatting goals, and target readers..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Send Motion Inquiry</button>
+                    <button type="submit" class="btn btn-primary btn-block">Send Book Inquiry</button>
                 </form>
                 <div class="form-success-msg" id="success-msg">
                     <div class="success-icon">✓</div>
-                    <h3>Story request sent successfully!</h3>
-                    <p>I'll review your project goals and respond within 24 hours. Let's make something amazing.</p>
+                    <h3>Your dream request is on its way!</h3>
+                    <p>I will review your manuscript goals and respond within 24 hours. Let's create something timeless.</p>
                 </div>
             </div>
         </section>
@@ -280,22 +342,22 @@
         <div class="footer-container container">
             <div class="footer-info">
                 <a href="#" class="logo">joy oghenemarie<span class="pink-dot">.</span></a>
-                <p>2D Motion Graphic Storytelling. Crafted with rhythm, physics, and emotion.</p>
+                <p>Creating portals through which people enter an experience of enlightenment and transformation.</p>
             </div>
             <div class="footer-links">
-                <a href="#about">About</a>
-                <a href="#why-me">Why Me</a>
-                <a href="#work">Work</a>
+                <a href="#about">Philosophy</a>
+                <a href="#books">Books</a>
+                <a href="#gallery">Gallery</a>
                 <a href="#inspo">Inspiration</a>
             </div>
         </div>
         <div class="footer-bottom container">
             <p>&copy; 2026 joy oghenemarie. All rights reserved.</p>
-            <p>Designed with Black, Electric Blues & Pink accents.</p>
+            <p>Designed with Berry Pink (#9B3056) & Crisp White theme.</p>
         </div>
     </footer>
 
-    <!-- Portfolio Detail Modals -->
+    <!-- Book/Gallery Detail Modals -->
     <div class="modal-overlay" id="project-modal">
         <div class="modal-content glass-card">
             <button class="modal-close" aria-label="Close modal">&times;</button>
@@ -303,23 +365,18 @@
                 <div class="modal-visual">
                     <div class="modal-media-wrapper">
                         <img src="" id="modal-img" alt="Project Detail">
-                        <div class="video-mock-overlay">
-                            <!-- Play button representation -->
-                            <div class="motion-pulse"></div>
-                            <span class="mock-play-text">Motion Preview Rendering...</span>
-                        </div>
                     </div>
                 </div>
                 <div class="modal-info">
-                    <span class="project-tag" id="modal-tag">Liquid Motion</span>
+                    <span class="project-tag" id="modal-tag">Illustrations • Editing</span>
                     <h3 id="modal-title">Project Title</h3>
                     <div class="modal-meta">
-                        <span><strong>Client:</strong> Creative Labs</span>
-                        <span><strong>Software:</strong> After Effects, Illustrator</span>
+                        <span><strong>Designer:</strong> Joy Oghenemarie</span>
+                        <span><strong>Impact:</strong> Rhythmic Art Therapy & Wellness</span>
                     </div>
-                    <p id="modal-desc">Detailed project description goes here. Explaining how the design concept was created, storyboarded, and animated to create a high-end storyteller feel.</p>
+                    <p id="modal-desc">Detailed project description goes here. Explaining how the design concept was created, storyboarded, and animated to create a high-end illustrator feel.</p>
                     <div class="modal-actions">
-                        <a href="#contact" class="btn btn-primary modal-cta">Inquire About This Style</a>
+                        <a href="#contact" class="btn btn-primary modal-cta">Inquire About This Service</a>
                     </div>
                 </div>
             </div>
